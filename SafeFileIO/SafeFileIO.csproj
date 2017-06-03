@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>Race condition safe I/O methods that will handle normal and expected exceptions.</Description>
+    <Copyright>Copyright (C) Lasse V. Karlsen 2017, All rights reserved</Copyright>
+    <PackageProjectUrl>https://github.com/lassevk/SafeFileIO</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lassevk/SafeFileIO.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/lassevk/SafeFileIO/blob/master/LICENSE.md</PackageLicenseUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Lasse V. Karlsen.snk</AssemblyOriginatorKeyFile>
+    <Authors>Lasse V. Karlsen</Authors>
+    <Company />
+    <Product>SafeFileIO</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_0,JETBRAINS_ANNOTATIONS</DefineConstants>
+    <DocumentationFile>bin\Debug\netstandard1.0\DiffLib.xml</DocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\DiffLib.xml</DocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+</Project>
