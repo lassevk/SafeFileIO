@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFramework>netstandard1.3</TargetFramework>
     <Description>Race condition safe I/O methods that will handle normal and expected exceptions.</Description>
     <Copyright>Copyright (C) Lasse V. Karlsen 2017, All rights reserved</Copyright>
     <PackageProjectUrl>https://github.com/lassevk/SafeFileIO</PackageProjectUrl>
@@ -17,6 +17,7 @@
     <Version>1.0.0</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
