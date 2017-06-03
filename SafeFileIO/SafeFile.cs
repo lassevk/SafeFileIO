@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace SafeFileIO
@@ -21,6 +22,9 @@ namespace SafeFileIO
         /// </returns>
         public static bool TryDelete(string filename)
         {
+            if (filename == null)
+                throw new ArgumentNullException(nameof(filename));
+
             try
             {
                 File.Delete(filename);
@@ -30,8 +34,9 @@ namespace SafeFileIO
             {
                 return false;
             }
-            catch (IOException ex) when (ex.HResult == 0x001)
+            catch (IOException ex) when (ex.HResult == unchecked((int)0x80070020))
             {
+                // File is in use
                 return false;
             }
         }
